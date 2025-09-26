@@ -6,20 +6,35 @@
     <title>Fadhil's Games Studio</title>
     <link rel="stylesheet" href="CSS/style.css">
 </head>
+<div id="nameModal" class="modal">
+  <div class="modal-content">
+    <h2>Welcome!</h2>
+    <p>Please enter your name:</p>
+    <input type="text" id="nameInput" placeholder="Your name">
+    <button id="saveNameBtn">Submit</button>
+  </div>
+</div>
+
 <body>
     <header>
-        <div class="logo"><img src="Images/tmopera.jpg" alt="tmopera"></div>
+        <div class="logo"><img src="Images/fauget.png" alt="tmopera"></div>
         <nav>
-            <a href="#">Home</a>
-            <a href="#">Our Profile</a>
-            <a href="#">Our Games</a>
-            <a href="#">Message Us</a>
+            <a href="#Home">Home</a>
+            <a href="#profile">Our Profile</a>
+            <a href="#games">Our Games</a>
+            <a href="#Message">Message Us</a>
+            <button id="removeNameBtn" class="nav-Btn">Change Name</button>
         </nav>
     </header>
 
-    <section class="TheBeginningofanewera">
-        <h1>Hello, Username Welcome To Our Website</h1>
+    <section  id="Home" class="TheBeginningofanewera">
+        <h1>Hello, <span id="username">Guest</span> Welcome To Our Website</h1>
         <p>Fadhil's Games Studios brings you many games with fun and endless content</p>
+    </section>
+
+    <section  id="profile" class="profile">
+        <h2>Our Profile</h2>
+        <p>We are a global Game Studio with teams in Jakarta, Helsinki, Tokyo <br> we are known for releasing a fallout 3 mod such as <strong>INSURGENCE</strong> and <strong>ELI SAGA</strong></p>
     </section>
 
     <section class="OurStudios">
@@ -41,7 +56,24 @@
 
     </section>
 
-    <section class="Message">
+    <section id="games" class="OurGames">
+  <h2>Our Games</h2>
+  <div class="GameList">
+    <div class="game insurgence">
+      <span>INSURGENCE</span>
+    </div>
+    <div class="game elisaga">
+      <span>ELI SAGA</span>
+    </div>
+    <div class="game comingsoon">
+      <span>COMING SOON…</span>
+    </div>
+  </div>
+</section>
+
+
+
+    <section id="Message" class="Message">
         <H2>Message Us</H2>
         <div class="message-container">
         <form id="messageForm">

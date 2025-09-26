@@ -3,11 +3,11 @@ document.addEventListener("DOMContentLoaded", () => {
   const resultBox = document.getElementById("Result");
 
   form.addEventListener("submit", (e) => {
-    e.preventDefault(); // stop reload
+    e.preventDefault(); 
 
     const name = document.getElementById("Nama").value;
     const dob = document.getElementById("DateOfBirth").value;
-    const gender = form.Gender.value; // note: "Gender" matches the radio name
+    const gender = form.Gender.value; 
     const message = document.getElementById("KomenPesan").value;
 
     resultBox.innerHTML = `
@@ -18,10 +18,80 @@ document.addEventListener("DOMContentLoaded", () => {
       <p><strong>Pesan:</strong> ${message}</p>
     `;
 
-    // fade-in effect
+    
     resultBox.classList.add("show");
 
-    // reset form fields
+    
     form.reset();
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const usernameSpan = document.getElementById("username");
+  const modal = document.getElementById("nameModal");
+  const nameInput = document.getElementById("nameInput");
+  const saveBtn = document.getElementById("saveNameBtn");
+  const removeBtn = document.getElementById("removeNameBtn");
+
+  
+  let name = localStorage.getItem("visitorName");
+
+  if (name) {
+    
+    usernameSpan.textContent = name;
+    modal.style.display = "none";
+  } else {
+    
+    modal.style.display = "flex";
+  }
+
+
+  saveBtn.addEventListener("click", () => {
+    const newName = nameInput.value.trim();
+    if (newName !== "") {
+      localStorage.setItem("visitorName", newName);
+      usernameSpan.textContent = newName;
+      modal.style.display = "none";
+    }
+  });
+
+  
+  removeBtn.addEventListener("click", () => {
+    localStorage.removeItem("visitorName");
+    usernameSpan.textContent = "Username";
+    modal.style.display = "flex"; 
+  });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const usernameSpan = document.getElementById("username");
+  const modal = document.getElementById("nameModal");
+  const nameInput = document.getElementById("nameInput");
+  const saveBtn = document.getElementById("saveNameBtn");
+  const removeBtn = document.getElementById("removeNameBtn");
+
+  let name = localStorage.getItem("visitorName");
+
+  if (!name) {
+    modal.style.display = "flex";
+  } else {
+    usernameSpan.textContent = name;
+  }
+
+  saveBtn.addEventListener("click", () => {
+    const newName = nameInput.value.trim();
+    if (newName !== "") {
+      localStorage.setItem("visitorName", newName);
+      usernameSpan.textContent = newName;
+      modal.style.display = "none";
+    }
+  });
+
+
+  removeBtn.addEventListener("click", () => {
+    localStorage.removeItem("visitorName");
+    usernameSpan.textContent = "Username";
+    modal.style.display = "flex"; 
   });
 });
