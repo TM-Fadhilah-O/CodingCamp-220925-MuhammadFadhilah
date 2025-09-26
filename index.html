@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fadhil's Games Studio</title>
+    <link rel="stylesheet" href="CSS/style.css">
 </head>
 <body>
     <header>
@@ -16,34 +17,46 @@
         </nav>
     </header>
 
-    <section class="The Beginning of a new era">
+    <section class="TheBeginningofanewera">
         <h1>Hello, Username Welcome To Our Website</h1>
         <p>Fadhil's Games Studios brings you many games with fun and endless content</p>
     </section>
 
-    <section class="Our Studios">
+    <section class="OurStudios">
         <h2>Our Studios</h2>
-        <div class="The Studios">
-            <div class="Tokyo"></div>
-            <div class="Jakarta"></div>
-            <div class="Helsinki"></div>
-        </div>
+        <div class="TheStudios">
+  <div class="studio-item">
+    <div class="Jakarta"></div>
+    <p>Jakarta</p>
+  </div>
+  <div class="studio-item">
+    <div class="Helsinki"></div>
+    <p>Helsinki</p>
+  </div>
+  <div class="studio-item">
+    <div class="Tokyo"></div>
+    <p>Tokyo</p>
+  </div>
+</div>
+
     </section>
 
     <section class="Message">
         <H2>Message Us</H2>
-        <form id="Message Input">
-            <label for="name">Nama: <input type="text" name="Nama" required></label><br>
+        <div class="message-container">
+        <form id="messageForm">
+            <label for="name">Nama: <input type="text" name="Nama" id="Nama" required></label><br>
             <label for="DateOfBirth">Tanggal Lahir: <input type="date" name="DateOfBirth" id="DateOfBirth" required></label><br>
             <label for="Gender">Jenis Kelamin: 
-                <input type="radio" name="Kelamin Laki" id="Laki" value="Laki-Laki"> Laki-Laki
-                <input type="radio" name="Kelamin Perempuan" id="Perempuan" value="Perempuan"> Perempuan
+                <input type="radio" name="Gender" id="Laki" value="Laki-Laki"> Laki-Laki
+                <input type="radio" name="Gender" id="Perempuan" value="Perempuan"> Perempuan
             </label><br>
             <label for="Komen">Pesan: <br><textarea name="Komen" id="KomenPesan" rows="3"></textarea><br>
                 <button type="submit">Submit</button>
             </label>
         </form>
         <div id="Result"></div>
+        </div>
 
     </section>
     <footer>
