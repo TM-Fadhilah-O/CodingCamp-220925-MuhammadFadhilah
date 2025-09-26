@@ -32,7 +32,7 @@ header nav a:hover {
 .TheBeginningofanewera {
   text-align: center;
   padding: 4rem 2rem;
-  background: url("../Images/FalloutCwawl.jpg") no-repeat center center/cover;
+  background: url("../Images/FalloutCwawl.JPG") no-repeat center center/cover;
   color: white
 }
 .TheBeginningofanewera h1 {
@@ -79,15 +79,15 @@ header nav a:hover {
 }
 
 .Jakarta {
-  background-image: url("../Images/indonesia.jpg");
+  background-image: url("../Images/indonesia.JPG");
 }
 
 .Helsinki {
-  background-image: url("../Images/Helsinki.jpg");
+  background-image: url("../Images/Helsinki.JPG");
 }
 
 .Tokyo {
-  background-image: url("../Images/Tokyo.jpg");
+  background-image: url("../Images/Tokyo.JPG");
 }
 
 .studio-item {
@@ -144,11 +144,11 @@ header nav a:hover {
 
 
 .insurgence {
-  background-image: url("../Images/insurgenceart.jpg"); 
+  background-image: url("../Images/insurgenceart.JPG"); 
 }
 
 .elisaga {
-  background-image: url("../Images/elisaga.jpg"); 
+  background-image: url("../Images/elisaga.JPG"); 
 }
 
 
